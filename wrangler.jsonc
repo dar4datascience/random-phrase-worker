@@ -1,0 +1,8 @@
+{
+  "name": "random-phrase",
+  "main": "src/index.js",
+  "compatibility_date": "2026-07-04",
+  "observability": {
+    "enabled": true
+  }
+}
