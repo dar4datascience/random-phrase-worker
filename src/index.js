@@ -1,84 +1,84 @@
 const openings = [
-  "Buenas noches",
-  "Dulces sueños",
-  "Que descanses",
-  "Descansa ya",
-  "Sueña bonito",
-  "Que la noche te abrace",
-  "Hasta el amanecer",
-  "Descansa, mi vida",
-  "Que el sueño te visite",
-  "Buenas noches, mi cielo",
+  { text: "Buenas noches", emoji: "🌙" },
+  { text: "Dulces sueños", emoji: "😴" },
+  { text: "Que descanses", emoji: "✨" },
+  { text: "Descansa ya", emoji: "🌙" },
+  { text: "Sueña bonito", emoji: "💫" },
+  { text: "Que la noche te abrace", emoji: "🌜" },
+  { text: "Hasta el amanecer", emoji: "🌅" },
+  { text: "Descansa, mi vida", emoji: "💕" },
+  { text: "Que el sueño te visite", emoji: "😴" },
+  { text: "Buenas noches, mi cielo", emoji: "🌌" },
 ];
 
 const nicknames = [
-  "mi hermosa",
-  "mi tierna",
-  "mi dulce",
-  "mi preciosa",
-  "mi flor más bella",
-  "mi amor",
-  "mi cielito",
-  "mi luz de la noche",
-  "mi gardenia",
-  "mi rosa de la noche",
-  "mi hada del sueño",
+  { text: "mi hermosa", emoji: "🌸" },
+  { text: "mi tierna", emoji: "🌷" },
+  { text: "mi dulce", emoji: "🍯" },
+  { text: "mi preciosa", emoji: "💎" },
+  { text: "mi flor más bella", emoji: "🌺" },
+  { text: "mi amor", emoji: "❤️" },
+  { text: "mi cielito", emoji: "🌟" },
+  { text: "mi luz de la noche", emoji: "✨" },
+  { text: "mi gardenia", emoji: "🌼" },
+  { text: "mi rosa de la noche", emoji: "🌹" },
+  { text: "mi hada del sueño", emoji: "🧚‍♀️" },
 ];
 
 const celestial = [
-  "las estrellas te abracen esta noche",
-  "la luna te cuente un cuento",
-  "el cielo entero te cuide",
-  "las constelaciones te guíen",
-  "la luna llena te ilumine",
-  "cada estrella susurre tu nombre",
-  "el firmamento te bendiga",
-  "la vía láctea te envuelva",
-  "los astros te sonrían",
-  "la luna te acune entre sus rayos",
-  "las estrellas bailen para ti",
-  "la noche estrellada te cante",
+  { text: "las estrellas te abracen esta noche", emoji: "⭐" },
+  { text: "la luna te cuente un cuento", emoji: "🌕" },
+  { text: "el cielo entero te cuide", emoji: "🌌" },
+  { text: "las constelaciones te guíen", emoji: "🔭" },
+  { text: "la luna llena te ilumine", emoji: "🌕" },
+  { text: "cada estrella susurre tu nombre", emoji: "✨" },
+  { text: "el firmamento te bendiga", emoji: "🌠" },
+  { text: "la vía láctea te envuelva", emoji: "🌌" },
+  { text: "los astros te sonrían", emoji: "🌟" },
+  { text: "la luna te acune entre sus rayos", emoji: "🌙" },
+  { text: "las estrellas bailen para ti", emoji: "💃" },
+  { text: "la noche estrellada te cante", emoji: "🌃" },
 ];
 
 const nature = [
-  "la lluvia te acaricie suavemente",
-  "los pétalos caigan sobre ti",
-  "el viento te susurre poemas",
-  "tu jardín florezca en sueños",
-  "la brisa te lleve a dormir",
-  "cada flor se abra para ti",
-  "el rocío te bese la frente",
-  "la tormenta se calme a tu lado",
-  "las hojas te canten nanas",
-  "el río te lleve a soñar",
-  "la niebla te envuelva en calma",
-  "la tierra te abrace como raíz",
+  { text: "la lluvia te acaricie suavemente", emoji: "🌧️" },
+  { text: "los pétalos caigan sobre ti", emoji: "🌸" },
+  { text: "el viento te susurre poemas", emoji: "🌬️" },
+  { text: "tu jardín florezca en sueños", emoji: "🌷" },
+  { text: "la brisa te lleve a dormir", emoji: "🍃" },
+  { text: "cada flor se abra para ti", emoji: "🌺" },
+  { text: "el rocío te bese la frente", emoji: "💧" },
+  { text: "la tormenta se calme a tu lado", emoji: "⛈️" },
+  { text: "las hojas te canten nanas", emoji: "🍂" },
+  { text: "el río te lleve a soñar", emoji: "🏞️" },
+  { text: "la niebla te envuelva en calma", emoji: "🌫️" },
+  { text: "la tierra te abrace como raíz", emoji: "🌱" },
 ];
 
 const dreams = [
-  "los sueños te lleven donde la lluvia nace",
-  "tu almohada sea de nubes",
-  "las mantas te cubran de estrellas",
-  "tu sueño sea profundo y sereno",
-  "los sueños te regalen un jardín",
-  "tu descanso sea un poema",
-  "los sueños te lleven a volar",
-  "tu cama sea un campo de flores",
-  "los sueños te abracen con ternura",
-  "tu descanso sea tan dulce como tú",
+  { text: "los sueños te lleven donde la lluvia nace", emoji: "💭" },
+  { text: "tu almohada sea de nubes", emoji: "☁️" },
+  { text: "las mantas te cubran de estrellas", emoji: "🌟" },
+  { text: "tu sueño sea profundo y sereno", emoji: "😴" },
+  { text: "los sueños te regalen un jardín", emoji: "🌈" },
+  { text: "tu descanso sea un poema", emoji: "📜" },
+  { text: "los sueños te lleven a volar", emoji: "🕊️" },
+  { text: "tu cama sea un campo de flores", emoji: "🌻" },
+  { text: "los sueños te abracen con ternura", emoji: "🤗" },
+  { text: "tu descanso sea tan dulce como tú", emoji: "🍬" },
 ];
 
 const closings = [
-  "te amo",
-  "que los sueños te abracen",
-  "hasta mañana",
-  "descansa entre estrellas",
-  "sueña conmigo",
-  "que amanezca con tu sonrisa",
-  "te llevo en el corazón",
-  "hasta que el sol nos vuelva a encontrar",
-  "que la noche te sea leve",
-  "eres mi último pensamiento del día",
+  { text: "te amo", emoji: "❤️" },
+  { text: "que los sueños te abracen", emoji: "🤗" },
+  { text: "hasta mañana", emoji: "🌅" },
+  { text: "descansa entre estrellas", emoji: "⭐" },
+  { text: "sueña conmigo", emoji: "💭" },
+  { text: "que amanezca con tu sonrisa", emoji: "😊" },
+  { text: "te llevo en el corazón", emoji: "💖" },
+  { text: "hasta que el sol nos vuelva a encontrar", emoji: "☀️" },
+  { text: "que la noche te sea leve", emoji: "🌙" },
+  { text: "eres mi último pensamiento del día", emoji: "🧠" },
 ];
 
 const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
@@ -87,28 +87,40 @@ const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 
 const templates = [
   // Template 1: Opening + nickname + celestial + closing
-  () =>
-    `${pick(openings)}, ${pick(nicknames)} Flor de Lluvia. Que ${pick(celestial)} y ${pick(dreams)}. ${cap(pick(closings))}.`,
+  () => {
+    const o = pick(openings), n = pick(nicknames), c = pick(celestial), d = pick(dreams), cl = pick(closings);
+    return `${o.text} ${o.emoji}, ${n.text} ${n.emoji} Flor de Lluvia. Que ${c.text} ${c.emoji} y ${d.text} ${d.emoji}. ${cap(cl.text)} ${cl.emoji}.`;
+  },
 
   // Template 2: Opening + nickname + nature + closing
-  () =>
-    `${pick(openings)}, ${pick(nicknames)}. Que ${pick(nature)} y ${pick(celestial)}. ${cap(pick(closings))}.`,
+  () => {
+    const o = pick(openings), n = pick(nicknames), na = pick(nature), c = pick(celestial), cl = pick(closings);
+    return `${o.text} ${o.emoji}, ${n.text} ${n.emoji}. Que ${na.text} ${na.emoji} y ${c.text} ${c.emoji}. ${cap(cl.text)} ${cl.emoji}.`;
+  },
 
   // Template 3: Opening + nickname + dreams + nature + closing
-  () =>
-    `${pick(openings)}, ${pick(nicknames)} Flor de Lluvia. Que ${pick(dreams)} y que ${pick(nature)}. ${cap(pick(closings))}.`,
+  () => {
+    const o = pick(openings), n = pick(nicknames), d = pick(dreams), na = pick(nature), cl = pick(closings);
+    return `${o.text} ${o.emoji}, ${n.text} ${n.emoji} Flor de Lluvia. Que ${d.text} ${d.emoji} y que ${na.text} ${na.emoji}. ${cap(cl.text)} ${cl.emoji}.`;
+  },
 
   // Template 4: Opening + celestial + nature + closing (no nickname inline)
-  () =>
-    `${pick(openings)}, Flor de Lluvia. Que ${pick(celestial)}, que ${pick(nature)}, y que ${pick(dreams)}. ${cap(pick(closings))}.`,
+  () => {
+    const o = pick(openings), c = pick(celestial), na = pick(nature), d = pick(dreams), cl = pick(closings);
+    return `${o.text} ${o.emoji}, Flor de Lluvia. Que ${c.text} ${c.emoji}, que ${na.text} ${na.emoji}, y que ${d.text} ${d.emoji}. ${cap(cl.text)} ${cl.emoji}.`;
+  },
 
   // Template 5: Opening + nickname + dreams + closing
-  () =>
-    `${pick(openings)}, ${pick(nicknames)}. ${cap(pick(dreams))} y que ${pick(nature)}. ${cap(pick(closings))}.`,
+  () => {
+    const o = pick(openings), n = pick(nicknames), d = pick(dreams), na = pick(nature), cl = pick(closings);
+    return `${o.text} ${o.emoji}, ${n.text} ${n.emoji}. ${cap(d.text)} ${d.emoji} y que ${na.text} ${na.emoji}. ${cap(cl.text)} ${cl.emoji}.`;
+  },
 
   // Template 6: Opening + nickname + celestial + nature + dreams + closing (long)
-  () =>
-    `${pick(openings)}, ${pick(nicknames)} Flor de Lluvia. Que ${pick(celestial)}, que ${pick(nature)}, y que ${pick(dreams)}. ${cap(pick(closings))}.`,
+  () => {
+    const o = pick(openings), n = pick(nicknames), c = pick(celestial), na = pick(nature), d = pick(dreams), cl = pick(closings);
+    return `${o.text} ${o.emoji}, ${n.text} ${n.emoji} Flor de Lluvia. Que ${c.text} ${c.emoji}, que ${na.text} ${na.emoji}, y que ${d.text} ${d.emoji}. ${cap(cl.text)} ${cl.emoji}.`;
+  },
 ];
 
 function generatePhrase() {
