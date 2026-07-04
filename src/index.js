@@ -1,32 +1,128 @@
-const phrases = [
-  "The early bird catches the worm, but the second mouse gets the cheese.",
-  "If at first you don't succeed, call it version 1.0.",
-  "There's no place like 127.0.0.1.",
-  "I would tell you a UDP joke, but you might not get it.",
-  "A SQL query walks into a bar, walks up to two tables and asks: 'Can I join you?'",
-  "Programmer: a machine that turns coffee into code.",
-  "There are 10 types of people: those who understand binary and those who don't.",
-  "Why do programmers prefer dark mode? Because light attracts bugs.",
-  "How many programmers does it take to change a light bulb? None — that's a hardware problem.",
-  "The best thing about a boolean is that even if you're wrong, you're only off by a bit.",
-  "Software is like sex: it's better when it's free. — Linus Torvalds",
-  "Talk is cheap. Show me the code. — Linus Torvalds",
-  "Premature optimization is the root of all evil. — Donald Knuth",
-  "It works on my machine.",
-  "That's not a bug, it's a feature.",
-  "99 little bugs in the code, 99 little bugs. Take one down, patch it around, 127 little bugs in the code.",
-  "First, solve the problem. Then write the code. — John Johnson",
-  "Code is like humor. When you have to explain it, it's bad. — Cory House",
-  "Simplicity is the soul of efficiency. — Austin Freeman",
-  "The only way to learn a new programming language is by writing programs in it. — Dennis Ritchie"
+const openings = [
+  "Buenas noches",
+  "Dulces sueños",
+  "Que descanses",
+  "Descansa ya",
+  "Sueña bonito",
+  "Que la noche te abrace",
+  "Hasta el amanecer",
+  "Descansa, mi vida",
+  "Que el sueño te visite",
+  "Buenas noches, mi cielo",
 ];
+
+const nicknames = [
+  "mi hermosa",
+  "mi tierna",
+  "mi dulce",
+  "mi preciosa",
+  "mi Flor de Lluvia",
+  "mi flor más bella",
+  "mi amor",
+  "mi cielito",
+  "mi luz de la noche",
+  "mi gardenia",
+  "mi rosa de la noche",
+  "mi hada del sueño",
+];
+
+const celestial = [
+  "las estrellas te abracen esta noche",
+  "la luna te cuente un cuento",
+  "el cielo entero te cuide",
+  "las constelaciones te guíen",
+  "la luna llena te ilumine",
+  "cada estrella susurre tu nombre",
+  "el firmamento te bendiga",
+  "la vía láctea te envuelva",
+  "los astros te sonrían",
+  "la luna te acune entre sus rayos",
+  "las estrellas bailen para ti",
+  "la noche estrellada te cante",
+];
+
+const nature = [
+  "la lluvia te acaricie suavemente",
+  "los pétalos caigan sobre ti",
+  "el viento te susurre poemas",
+  "tu jardín florezca en sueños",
+  "la brisa te lleve a dormir",
+  "cada flor se abra para ti",
+  "el rocío te bese la frente",
+  "la tormenta se calme a tu lado",
+  "las hojas te canten nanas",
+  "el río te lleve a soñar",
+  "la niebla te envuelva en calma",
+  "la tierra te abrace como raíz",
+];
+
+const dreams = [
+  "los sueños te lleven donde la lluvia nace",
+  "tu almohada sea de nubes",
+  "las mantas te cubran de estrellas",
+  "tu sueño sea profundo y sereno",
+  "los sueños te regalen un jardín",
+  "tu descanso sea un poema",
+  "los sueños te lleven a volar",
+  "tu cama sea un campo de flores",
+  "los sueños te abracen con ternura",
+  "tu descanso sea tan dulce como tú",
+];
+
+const closings = [
+  "te amo",
+  "que los sueños te abracen",
+  "hasta mañana",
+  "descansa entre estrellas",
+  "sueña conmigo",
+  "que amanezca con tu sonrisa",
+  "te llevo en el corazón",
+  "hasta que el sol nos vuelva a encontrar",
+  "que la noche te sea leve",
+  "eres mi último pensamiento del día",
+];
+
+const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+
+const templates = [
+  // Template 1: Opening + nickname + celestial + closing
+  () =>
+    `${pick(openings)}, ${pick(nicknames)} Flor de Lluvia. Que ${pick(celestial)} y ${pick(dreams)}. ${cap(pick(closings))}.`,
+
+  // Template 2: Opening + nickname + nature + closing
+  () =>
+    `${pick(openings)}, ${pick(nicknames)}. Que ${pick(nature)} y ${pick(celestial)}. ${cap(pick(closings))}.`,
+
+  // Template 3: Opening + nickname + dreams + nature + closing
+  () =>
+    `${pick(openings)}, ${pick(nicknames)} Flor de Lluvia. Que ${pick(dreams)} y que ${pick(nature)}. ${cap(pick(closings))}.`,
+
+  // Template 4: Opening + celestial + nature + closing (no nickname inline)
+  () =>
+    `${pick(openings)}, Flor de Lluvia. Que ${pick(celestial)}, que ${pick(nature)}, y que ${pick(dreams)}. ${cap(pick(closings))}.`,
+
+  // Template 5: Opening + nickname + dreams + closing
+  () =>
+    `${pick(openings)}, ${pick(nicknames)}. ${cap(pick(dreams))} y que ${pick(nature)}. ${cap(pick(closings))}.`,
+
+  // Template 6: Opening + nickname + celestial + nature + dreams + closing (long)
+  () =>
+    `${pick(openings)}, ${pick(nicknames)} Flor de Lluvia. Que ${pick(celestial)}, que ${pick(nature)}, y que ${pick(dreams)}. ${cap(pick(closings))}.`,
+];
+
+function generatePhrase() {
+  const template = pick(templates);
+  return template();
+}
 
 export default {
   async fetch(request) {
     const url = new URL(request.url);
 
     if (request.method === "GET" && url.pathname === "/") {
-      const phrase = phrases[Math.floor(Math.random() * phrases.length)];
+      const phrase = generatePhrase();
       return new Response(JSON.stringify({ phrase }), {
         headers: {
           "Content-Type": "application/json",
