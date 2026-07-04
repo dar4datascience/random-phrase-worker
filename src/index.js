@@ -81,6 +81,8 @@ const closings = [
   { text: "eres mi último pensamiento del día", emoji: "🧠" },
 ];
 
+const name = "Flor de Lluvia 🌸🌱💧";
+
 const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
 const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
@@ -89,7 +91,7 @@ const templates = [
   // Template 1: Opening + nickname + celestial + closing
   () => {
     const o = pick(openings), n = pick(nicknames), c = pick(celestial), d = pick(dreams), cl = pick(closings);
-    return `${o.text} ${o.emoji}, ${n.text} ${n.emoji} Flor de Lluvia. Que ${c.text} ${c.emoji} y ${d.text} ${d.emoji}. ${cap(cl.text)} ${cl.emoji}.`;
+    return `${o.text} ${o.emoji}, ${n.text} ${n.emoji} ${name}. Que ${c.text} ${c.emoji} y ${d.text} ${d.emoji}. ${cap(cl.text)} ${cl.emoji}.`;
   },
 
   // Template 2: Opening + nickname + nature + closing
@@ -101,13 +103,13 @@ const templates = [
   // Template 3: Opening + nickname + dreams + nature + closing
   () => {
     const o = pick(openings), n = pick(nicknames), d = pick(dreams), na = pick(nature), cl = pick(closings);
-    return `${o.text} ${o.emoji}, ${n.text} ${n.emoji} Flor de Lluvia. Que ${d.text} ${d.emoji} y que ${na.text} ${na.emoji}. ${cap(cl.text)} ${cl.emoji}.`;
+    return `${o.text} ${o.emoji}, ${n.text} ${n.emoji} ${name}. Que ${d.text} ${d.emoji} y que ${na.text} ${na.emoji}. ${cap(cl.text)} ${cl.emoji}.`;
   },
 
   // Template 4: Opening + celestial + nature + closing (no nickname inline)
   () => {
     const o = pick(openings), c = pick(celestial), na = pick(nature), d = pick(dreams), cl = pick(closings);
-    return `${o.text} ${o.emoji}, Flor de Lluvia. Que ${c.text} ${c.emoji}, que ${na.text} ${na.emoji}, y que ${d.text} ${d.emoji}. ${cap(cl.text)} ${cl.emoji}.`;
+    return `${o.text} ${o.emoji}, ${name}. Que ${c.text} ${c.emoji}, que ${na.text} ${na.emoji}, y que ${d.text} ${d.emoji}. ${cap(cl.text)} ${cl.emoji}.`;
   },
 
   // Template 5: Opening + nickname + dreams + closing
@@ -119,7 +121,7 @@ const templates = [
   // Template 6: Opening + nickname + celestial + nature + dreams + closing (long)
   () => {
     const o = pick(openings), n = pick(nicknames), c = pick(celestial), na = pick(nature), d = pick(dreams), cl = pick(closings);
-    return `${o.text} ${o.emoji}, ${n.text} ${n.emoji} Flor de Lluvia. Que ${c.text} ${c.emoji}, que ${na.text} ${na.emoji}, y que ${d.text} ${d.emoji}. ${cap(cl.text)} ${cl.emoji}.`;
+    return `${o.text} ${o.emoji}, ${n.text} ${n.emoji} ${name}. Que ${c.text} ${c.emoji}, que ${na.text} ${na.emoji}, y que ${d.text} ${d.emoji}. ${cap(cl.text)} ${cl.emoji}.`;
   },
 ];
 
