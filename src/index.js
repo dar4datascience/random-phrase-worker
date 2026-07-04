@@ -84,7 +84,7 @@ const catMetaphors = [
 ];
 
 const closings = [
-  { text: "te amo", emoji: "❤️" },
+  { text: "te quiero mucho", emoji: "❤️" },
   { text: "que los sueños te abracen", emoji: "🤗" },
   { text: "hasta mañana", emoji: "🌅" },
   { text: "descansa entre estrellas", emoji: "⭐" },
