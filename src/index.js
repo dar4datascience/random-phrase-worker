@@ -16,7 +16,6 @@ const nicknames = [
   "mi tierna",
   "mi dulce",
   "mi preciosa",
-  "mi Flor de Lluvia",
   "mi flor más bella",
   "mi amor",
   "mi cielito",
