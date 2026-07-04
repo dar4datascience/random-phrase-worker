@@ -68,6 +68,21 @@ const dreams = [
   { text: "tu descanso sea tan dulce como tú", emoji: "🍬" },
 ];
 
+const catMetaphors = [
+  { text: "que tu descanso sea suave como la barriga de un gatito", emoji: "🐱" },
+  { text: "que tus sueños sean tan suaves como las patitas de un gato", emoji: "🐾" },
+  { text: "que duermas acurrucada como un gatito al sol", emoji: "🐈" },
+  { text: "que la paz te envuelva como el pelaje de un gato en invierno", emoji: "🐱" },
+  { text: "que tus sueños ronroneen como un gatito feliz", emoji: "😻" },
+  { text: "que descanses sobre nubes tan mullidas como la barriga de un gato", emoji: "☁️" },
+  { text: "que la noche te acaricie como las patitas de un gatito sobre tu cara", emoji: "🐾" },
+  { text: "que tu sueño sea tan tranquilo como un gato durmiendo al sol", emoji: "🐈" },
+  { text: "que los sueños te abracen como un gatito que se acurruca en tu pecho", emoji: "🐱" },
+  { text: "que descanses tan plácidamente como un gato sobre una cobija tibia", emoji: "😺" },
+  { text: "que tu descanso sea tan dulce como el ronroneo de un gatito dormido", emoji: "💤" },
+  { text: "que la noche te envuelva tan suave como las orejitas de un gato", emoji: "🐱" },
+];
+
 const closings = [
   { text: "te amo", emoji: "❤️" },
   { text: "que los sueños te abracen", emoji: "🤗" },
@@ -88,40 +103,40 @@ const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
 const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 
 const templates = [
-  // Template 1: Opening + nickname + celestial + closing
+  // Template 1: Opening + nickname + celestial + cat + closing
   () => {
-    const o = pick(openings), n = pick(nicknames), c = pick(celestial), d = pick(dreams), cl = pick(closings);
-    return `${o.text} ${o.emoji}, ${n.text} ${n.emoji} ${name}. Que ${c.text} ${c.emoji} y ${d.text} ${d.emoji}. ${cap(cl.text)} ${cl.emoji}.`;
+    const o = pick(openings), n = pick(nicknames), c = pick(celestial), d = pick(dreams), cat = pick(catMetaphors), cl = pick(closings);
+    return `${o.text} ${o.emoji}, ${n.text} ${n.emoji} ${name}. Que ${c.text} ${c.emoji} y ${d.text} ${d.emoji}. Que ${cat.text} ${cat.emoji}. ${cap(cl.text)} ${cl.emoji}.`;
   },
 
-  // Template 2: Opening + nickname + nature + closing
+  // Template 2: Opening + nickname + nature + cat + closing
   () => {
-    const o = pick(openings), n = pick(nicknames), na = pick(nature), c = pick(celestial), cl = pick(closings);
-    return `${o.text} ${o.emoji}, ${n.text} ${n.emoji}. Que ${na.text} ${na.emoji} y ${c.text} ${c.emoji}. ${cap(cl.text)} ${cl.emoji}.`;
+    const o = pick(openings), n = pick(nicknames), na = pick(nature), c = pick(celestial), cat = pick(catMetaphors), cl = pick(closings);
+    return `${o.text} ${o.emoji}, ${n.text} ${n.emoji}. Que ${na.text} ${na.emoji} y ${c.text} ${c.emoji}. Que ${cat.text} ${cat.emoji}. ${cap(cl.text)} ${cl.emoji}.`;
   },
 
-  // Template 3: Opening + nickname + dreams + nature + closing
+  // Template 3: Opening + nickname + dreams + nature + cat + closing
   () => {
-    const o = pick(openings), n = pick(nicknames), d = pick(dreams), na = pick(nature), cl = pick(closings);
-    return `${o.text} ${o.emoji}, ${n.text} ${n.emoji} ${name}. Que ${d.text} ${d.emoji} y que ${na.text} ${na.emoji}. ${cap(cl.text)} ${cl.emoji}.`;
+    const o = pick(openings), n = pick(nicknames), d = pick(dreams), na = pick(nature), cat = pick(catMetaphors), cl = pick(closings);
+    return `${o.text} ${o.emoji}, ${n.text} ${n.emoji} ${name}. Que ${d.text} ${d.emoji} y que ${na.text} ${na.emoji}. Que ${cat.text} ${cat.emoji}. ${cap(cl.text)} ${cl.emoji}.`;
   },
 
-  // Template 4: Opening + celestial + nature + closing (no nickname inline)
+  // Template 4: Opening + celestial + nature + cat + closing (no nickname inline)
   () => {
-    const o = pick(openings), c = pick(celestial), na = pick(nature), d = pick(dreams), cl = pick(closings);
-    return `${o.text} ${o.emoji}, ${name}. Que ${c.text} ${c.emoji}, que ${na.text} ${na.emoji}, y que ${d.text} ${d.emoji}. ${cap(cl.text)} ${cl.emoji}.`;
+    const o = pick(openings), c = pick(celestial), na = pick(nature), d = pick(dreams), cat = pick(catMetaphors), cl = pick(closings);
+    return `${o.text} ${o.emoji}, ${name}. Que ${c.text} ${c.emoji}, que ${na.text} ${na.emoji}, y que ${d.text} ${d.emoji}. Que ${cat.text} ${cat.emoji}. ${cap(cl.text)} ${cl.emoji}.`;
   },
 
-  // Template 5: Opening + nickname + dreams + closing
+  // Template 5: Opening + nickname + cat + dreams + closing
   () => {
-    const o = pick(openings), n = pick(nicknames), d = pick(dreams), na = pick(nature), cl = pick(closings);
-    return `${o.text} ${o.emoji}, ${n.text} ${n.emoji}. ${cap(d.text)} ${d.emoji} y que ${na.text} ${na.emoji}. ${cap(cl.text)} ${cl.emoji}.`;
+    const o = pick(openings), n = pick(nicknames), cat = pick(catMetaphors), d = pick(dreams), na = pick(nature), cl = pick(closings);
+    return `${o.text} ${o.emoji}, ${n.text} ${n.emoji}. Que ${cat.text} ${cat.emoji}. ${cap(d.text)} ${d.emoji} y que ${na.text} ${na.emoji}. ${cap(cl.text)} ${cl.emoji}.`;
   },
 
-  // Template 6: Opening + nickname + celestial + nature + dreams + closing (long)
+  // Template 6: Opening + nickname + celestial + nature + cat + dreams + closing (long)
   () => {
-    const o = pick(openings), n = pick(nicknames), c = pick(celestial), na = pick(nature), d = pick(dreams), cl = pick(closings);
-    return `${o.text} ${o.emoji}, ${n.text} ${n.emoji} ${name}. Que ${c.text} ${c.emoji}, que ${na.text} ${na.emoji}, y que ${d.text} ${d.emoji}. ${cap(cl.text)} ${cl.emoji}.`;
+    const o = pick(openings), n = pick(nicknames), c = pick(celestial), na = pick(nature), cat = pick(catMetaphors), d = pick(dreams), cl = pick(closings);
+    return `${o.text} ${o.emoji}, ${n.text} ${n.emoji} ${name}. Que ${c.text} ${c.emoji}, que ${na.text} ${na.emoji}, que ${cat.text} ${cat.emoji}, y que ${d.text} ${d.emoji}. ${cap(cl.text)} ${cl.emoji}.`;
   },
 ];
 
