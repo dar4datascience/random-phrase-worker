@@ -277,7 +277,7 @@ function generateShortPhrase() {
   const opening = pick(shortOpenings);
   const emojiCount = 1 + Math.floor(Math.random() * 5);
   const emojis = Array.from({ length: emojiCount }, () => pick(emojiPool)).join("");
-  let phrase = `${opening}, {name}, besitos nocturnos, te quiero mucho ${emojis}`;
+  let phrase = `${opening}, moneytimes, besitos nocturnos, te quiero mucho ${emojis}`;
   if (Math.random() < 0.5) {
     phrase += " Besitos al Ricycle 🚲🚲";
   }
