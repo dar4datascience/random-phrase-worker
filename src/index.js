@@ -161,6 +161,27 @@ const closings = [
   { text: "eres mi último pensamiento del día", emoji: "🧠" },
 ];
 
+const shortOpenings = [
+  "Buenas noches",
+  "Dulces sueños",
+  "Que descanses",
+  "Descansa ya",
+  "Sueña bonito",
+  "Que la noche te abrace",
+  "Hasta el amanecer",
+  "Que el sueño te visite",
+  "Buenas noches, mi cielo",
+  "Descansa, mi vida",
+];
+
+const emojiPool = [
+  "🐱", "🐈", "🐾", "😻", "😺",
+  "🌳", "🌲", "🌿", "🍂",
+  "🏙️", "🌃", "🌆",
+  "❤️",
+  "🚲", "🚴‍♀️",
+];
+
 const name = "Flor de Lluvia 🌸🌱💧";
 
 const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
@@ -252,12 +273,32 @@ function generatePhrase() {
   return template();
 }
 
+function generateShortPhrase() {
+  const opening = pick(shortOpenings);
+  const emojiCount = 1 + Math.floor(Math.random() * 5);
+  const emojis = Array.from({ length: emojiCount }, () => pick(emojiPool)).join("");
+  let phrase = `${opening}, {name}, besitos nocturnos, te quiero mucho ${emojis}`;
+  if (Math.random() < 0.5) {
+    phrase += " Besitos al Ricycle 🚲🚲";
+  }
+  return phrase;
+}
+
 export default {
   async fetch(request) {
     const url = new URL(request.url);
 
     if (request.method === "GET" && url.pathname === "/") {
       const phrase = generatePhrase();
+      return new Response(JSON.stringify({ phrase }), {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+    }
+
+    if (request.method === "GET" && url.pathname === "/short") {
+      const phrase = generateShortPhrase();
       return new Response(JSON.stringify({ phrase }), {
         headers: {
           "Content-Type": "application/json",
